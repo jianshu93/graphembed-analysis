@@ -1,5 +1,5 @@
 # graphembed-analysis
-Repo for installing and analyzing results from graphembed crate
+Repo for installing and analyzing results from [graphembed](https://github.com/jean-pierreBoth/graphembed?tab=readme-ov-file) crate
 
 # Install
 ## If you have conda installed on Linux
