@@ -1,3 +1,10 @@
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/graphembed/README.html)
+![](https://anaconda.org/bioconda/graphembed/badges/license.svg)
+![](https://anaconda.org/bioconda/graphembed/badges/version.svg)
+![](https://anaconda.org/bioconda/graphembed/badges/latest_release_relative_date.svg)
+![](https://anaconda.org/bioconda/graphembed/badges/platforms.svg)
+
+
 # graphembed-analysis
 Repo for installing and analyzing results from [graphembed](https://github.com/jean-pierreBoth/graphembed?tab=readme-ov-file) crate
 
@@ -16,7 +23,7 @@ chmod a+x ./graphembed
 
 ## If you have conda installed on Linux
 ```bash
-conda install -c bioconda graphembed
+conda install -c bioconda -c conda-forge graphembed
 ```
 
 ## If you are macOS with homebrew installed
@@ -69,3 +76,12 @@ graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 
 
 
 ```
+## Benchmark analysis
+1. Install MongoDB Database Tools here: https://www.mongodb.com/docs/database-tools/installation/installation-linux/
+```bash
+### for MacOS, simply install via homebrew
+brew tap mongodb/brew
+brew install mongodb-database-tools
+```
+2. Run graphembed for your dataset
+3. Transfrom from BSON output file to JSON output format
