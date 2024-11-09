@@ -79,9 +79,26 @@ graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 
 ## Benchmark analysis
 1. Install MongoDB Database Tools here: https://www.mongodb.com/docs/database-tools/installation/installation-linux/
 ```bash
+### Use the copy in the release page
+wget https://github.com/jianshu93/graphembed-analysis/releases/download/v0.0.1/mongodb-database-tools-rhel93-x86_64-100.10.0.tgz
+tar -zxvf mongodb-database-tools-rhel93-x86_64-100.10.0.tgz
+cd mongodb-database-tools-rhel93-x86_64-100.10.0/bin
+chmod a+x ./*
+### add to path
+echo 'export PATH="'$PWD':$PATH"' >> ~/.bashrc
+source ~/.bashrc
+./bsondump --help
+
 ### for MacOS, simply install via homebrew
 brew tap mongodb/brew
 brew install mongodb-database-tools
 ```
 2. Run graphembed for your dataset
 3. Transfrom from BSON output file to JSON output format
+```bash
+bsondump --bsonFile=in.bson  --outFile=out.json
+```
+
+
+## References
+
