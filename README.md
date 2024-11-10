@@ -101,5 +101,9 @@ bsondump --bsonFile=in.bson  --outFile=out.json
 ```
 
 
+### Performance note
+By default, graphembed relies on [Intel Math Kernel Library](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html) (intel-mkl-static feature) as the BLAS backend to make full use of x86 CPU performance on Linux machines. However, it is possible to use the open source [OpenBLAS](https://www.openblas.net) (openblas-static feature) as the BLAS backend. Our tests showed that OpenBLAS is slightly slower than Intel MKL on x86-64 Linux. On x86-64/Intel MacOS, OpenBLAS/Intel-MKL performance is significantly decreased compared to Linux but still supported (openblas-system/intel-mkl-system feature). We also provide the native BLAS framework support from MacOS called [Accelerate Framework](https://developer.apple.com/documentation/accelerate) (macos-accelerate feature). On aarch64 MacOS (M1, M2, M3 and M4 series chips), only the OpenBLAS and Accelerate Framework backend is supported (macos-accelerate feature). Again, performance decreased for both compared to Linux. 
+
+
 ## References
 
