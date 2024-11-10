@@ -45,13 +45,14 @@ wget https://github.com/jianshu93/graphembed/releases/download/v0.1.1/BlogCatalo
 graphembed --csv ./BlogCatalog.txt --symetric true embedding -o embed_output sketching --dim 128 --decay 0.3 --nbiter 5 --symetric
 
 #### sketching via HOPE algorithm, only for small datasets (e.g., less than 10,000 nodes)
-graphembed --csv ./BlogCatalog.txt --symetric true embedding -o embed_output hope precision --epsil 0.1 --maxrank 1000 --blockiter 3
+graphembed --csv ./BlogCatalog.txt --symetric true embedding -o embed_output hope rank --targetrank 128 --nbiter 5
 
 ### accuracy evaluation and benchmark via the validation subcommand
 #### sketching
 graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric sketching --symetric --dim 128 --decay 0.3 --nbiter 5
 #### HOPE
-graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric hope precision --epsil 0.1 --maxrank 1000 --blockiter 3
+graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric hope rank --targetrank 128 --nbiter 5
+
 
 
 ## asymetric graph (directed graph)
