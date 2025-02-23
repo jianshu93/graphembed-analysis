@@ -49,9 +49,9 @@ graphembed --csv ./BlogCatalog.txt --symetric true embedding -o embed_output hop
 
 ### accuracy evaluation and benchmark via the validation subcommand
 #### sketching
-graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric sketching --symetric --dim 128 --decay 0.3 --nbiter 5
+RUST_LOG=info graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric sketching --symetric --dim 128 --decay 0.3 --nbiter 5
 #### HOPE
-graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric hope rank --targetrank 128 --nbiter 5
+RUST_LOG=info graphembed --csv ./BlogCatalog.txt --symetric true validation --nbpass 1  --skip 0.2 --centric hope rank --targetrank 128 --nbiter 5
 
 
 
@@ -68,9 +68,9 @@ graphembed --csv ./wiki-Vote.txt --symetric false embedding -o embed_output hope
 
 ### accuracy evaluation and benchmark via the validation subcommand
 #### sketching
-graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric sketching  --dim 128 --decay 0.3 --nbiter 5
+RUST_LOG=info graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric sketching  --dim 128 --decay 0.3 --nbiter 5
 #### HOPE
-graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric hope precision --epsil 0.1 --maxrank 1000 --blockiter 3
+RUST_LOG=info graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric hope precision --epsil 0.1 --maxrank 1000 --blockiter 3
 
 
 ## weighted graph (directed or not)
