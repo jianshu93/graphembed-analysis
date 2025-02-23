@@ -3,6 +3,8 @@
 ![](https://anaconda.org/bioconda/graphembed/badges/version.svg)
 ![](https://anaconda.org/bioconda/graphembed/badges/latest_release_relative_date.svg)
 ![](https://anaconda.org/bioconda/graphembed/badges/platforms.svg)
+[![install with conda](https://anaconda.org/bioconda/graphembed/badges/downloads.svg)](https://anaconda.org/bioconda/graphembed)
+
 
 
 # graphembed-analysis
