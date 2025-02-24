@@ -25,7 +25,7 @@ chmod a+x ./graphembed
 
 ## If you have conda installed on Linux
 ```bash
-conda install -c bioconda -c conda-forge graphembed
+conda install -c bioconda -c conda-forge graphembed=0.1.2
 ```
 
 ## If you are macOS with homebrew installed
