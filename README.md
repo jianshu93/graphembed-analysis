@@ -30,9 +30,9 @@ conda install -c bioconda -c conda-forge graphembed=0.1.2
 
 ## If you are macOS with homebrew installed
 ```bash
-brew tap jianshu93/graphembed@0.1.2
+brew tap jianshu93/graphembed
 brew update
-brew install graphembed
+brew install graphembed@0.1.2
 ```
 
 # Usage
