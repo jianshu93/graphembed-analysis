@@ -14,8 +14,8 @@ Repo for installing and analyzing results from [graphembed](https://github.com/j
 
 ## prebuilt binaries for Linux
 ```bash
-wget https://github.com/jianshu93/graphembed/releases/download/v0.1.2/graphembed_Linux_x86-64_v0.1.1.zip
-unzip graphembed_Linux_x86-64_v0.1.1.zip
+wget https://github.com/jianshu93/graphembed/releases/download/v0.1.4/graphembed_Linux_x86-64_v0.1.4.zip
+unzip graphembed_Linux_x86-64_v0.1.4.zip
 chmod a+x ./graphembed
 ./graphembed -h
 
@@ -25,14 +25,14 @@ chmod a+x ./graphembed
 
 ## If you have conda installed on Linux
 ```bash
-conda install -c bioconda -c conda-forge graphembed=0.1.2
+conda install -c bioconda -c conda-forge graphembed
 ```
 
 ## If you are macOS with homebrew installed
 ```bash
 brew tap jianshu93/graphembed
 brew update
-brew install graphembed@0.1.2
+brew install graphembed
 ```
 
 # Usage
