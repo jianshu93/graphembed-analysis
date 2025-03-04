@@ -68,15 +68,18 @@ graphembed --csv ./wiki-Vote.txt --symetric false embedding -o embed_output sket
 graphembed --csv ./wiki-Vote.txt --symetric false embedding -o embed_output hope rank --targetrank 128 --nbiter 5
 
 
-### accuracy evaluation and benchmark via the validation subcommand
+### accuracy evaluation and benchmark via the validation subcommand. Note that centric AUC and VCMPR does not work for directed but AUC will work as usual
 #### sketching
 RUST_LOG=info graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric sketching  --dim 128 --decay 0.3 --nbiter 5
 #### HOPE
 RUST_LOG=info graphembed --csv ./wiki-Vote.txt --symetric false validation --nbpass 1  --skip 0.2 --centric hope rank --targetrank 128 --nbiter 5
 
 
-## weighted graph (directed or not)
+## weighted graph (undirected)
+### Download annd unzip coauth-MAG.txt.gz file here: https://www.cs.cornell.edu/~arb/data/coauth-MAG/
 
+gunzip coauth-MAG.txt.gz
+RUST_LOG=info graphembed --csv ./coauth-MAG.txt --symetric true validation --nbpass 1  --skip 0.2 sketching --dim 128 --decay 0.3 --nbiter 5
 
 ```
 ## Benchmark analysis
