@@ -8,7 +8,7 @@
 
 
 # graphembed-analysis
-Repo for installing and analyzing results from [graphembed](https://github.com/jean-pierreBoth/graphembed?tab=readme-ov-file) crate
+Repo for installing and analyzing results from [graphembed](https://gitlab.com/Jianshu_Zhao/graphembed) crate
 
 # Install
 
